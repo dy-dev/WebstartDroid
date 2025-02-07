@@ -7,7 +7,7 @@
 
     <style name="Theme.WebstartDroid" parent="Base.Theme.WebstartDroid" >
         <item name="android:textColor">@color/another</item>
-        <item name="android:textSize">48sp</item>
+        <item name="android:textSize">24sp</item>
     </style>
 
     <style name="SpeStyleWebStart" parent="Base.Theme.WebstartDroid" >

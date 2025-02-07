@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WebstartDroid</string>
+    <string name="i_am_in_landscape_mode">Je suis en mode potrait</string>
+    <string name="hello_webstart">Coucou</string>
+</resources>

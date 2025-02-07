@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebstartDroid</string>
+    <string name="i_am_in_landscape_mode">I am in landscape mode</string>
+    <string name="hello_webstart">Hello Webstart!</string>
+    <string name="first_new_entry" translatable="false">This is my first entry</string>
+    <string name="second_new_entry" translatable="false">This is my second entry</string>
+</resources>

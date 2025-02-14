@@ -21,7 +21,7 @@
         <TextView
             android:id="@+id/scoreTextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="right"
             android:gravity="right"
             android:text="0" />
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="vis">
+        android:visibility="gone">
 
 
         <LinearLayout
@@ -51,16 +51,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Enter your Guess"
+                android:maxLength="2"
                 android:inputType="number"
                 android:text="" />
         </LinearLayout>
 
         <Button
+            android:id="@+id/validateGuess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
             android:backgroundTint="@color/again"
+            android:enabled="false"
             android:text="Validate" />
 
         <LinearLayout
@@ -70,20 +73,23 @@
             android:orientation="horizontal">
 
             <ProgressBar
+                android:id="@+id/progress_bar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="9"
-                android:progress="30" />
+                android:max="10"
+                android:progress="0" />
 
             <TextView
+                android:id="@+id/progress_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
 
                 android:gravity="center"
-                android:text="3" />
+                android:text="0" />
         </LinearLayout>
 
         <LinearLayout
@@ -125,14 +131,14 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/difficultyLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible"
+        android:visibility="visible"
         >
 
         <LinearLayout
-            android:id="@+id/difficultyLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -144,29 +150,41 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/Easy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:text="Easy" />
+                    android:onClick="selectDiff"
+                    android:tag="Easy"
+                    android:text="Easy"
+                    android:textSize="14sp" />
 
                 <RadioButton
+                    android:id="@+id/Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
+                    android:onClick="selectDiff"
+                    android:tag="Medium"
                     android:text="Medium" />
 
                 <RadioButton
+                    android:id="@+id/Hard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
+                    android:onClick="selectDiff"
+                    android:tag="Hard"
                     android:text="Hard" />
             </RadioGroup>
 
             <Button
+                android:id="@+id/validate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:text="Validate"/>
+                android:enabled="false"
+                android:onClick="validateDiff"
+                android:text="Validate"
+                android:textSize="14sp" />
         </LinearLayout>
 
 
